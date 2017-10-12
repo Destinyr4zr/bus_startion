@@ -12,10 +12,12 @@ public class Menu{
         System.out.println(persons.size());
     }
     public void fill_information(){
-        Person bob = new Person("bob", "123", false);
+        Person bob = new Person("bob", "123", false );
         persons.add(bob);
         Person Mike = new Person("Mike","frog",true);
         persons.add(Mike);
+        Rout rout = new Rout("Moscow","London","12:20","15:50");
+        persons.get(0).routs.add(rout);
 
     }
     public void show_window(){
@@ -39,10 +41,15 @@ public class Menu{
             @Override
             public void actionPerformed(ActionEvent e) {
                 boolean found = false;
-                for(int i = 0; i < persons.size();i++){
-                    if(login_field.getText().equals(persons.get(i).name) && password_field.getText().equals(persons.get(i).password) ){
+                for(int id = 0; id < persons.size();id++){
+                    if(login_field.getText().equals(persons.get(id).name) && password_field.getText().equals(persons.get(id).password) ){
                         found = true;
 
+                        if  (!persons.get(id).role)
+                        {
+                            Driver driver = new Driver();
+                            driver.show_window (persons, id, persons.get(id).role);
+                        }
                     }
                 }
                 if(!found){
@@ -51,6 +58,7 @@ public class Menu{
                 }
             }
         });
+
         exit.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
