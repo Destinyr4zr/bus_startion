@@ -1,4 +1,4 @@
-![screenshot of sample](http://oi42.tinypic.com/3346rk8.jpg)
+![screenshot of sample](https://www.viaggioinpullman.it/wp-content/uploads/2017/03/bus-pi%C3%B9-veloce.jpg)
 
     ___.                               __                 __  .__        
     \_ |__  __ __  ______      _______/  |______ ________/  |_|__| ____   ____   
